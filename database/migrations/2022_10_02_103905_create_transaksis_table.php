@@ -15,7 +15,10 @@ class CreateTransaksisTable extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->date('tgl_transaksi');
+            $table->foreignId('id_konsumen');
+            $table->integer('total_harga');
+            $table->string('oleh');
         });
     }
 
