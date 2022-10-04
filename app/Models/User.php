@@ -55,4 +55,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(admin::class);
     }
+
+    public function karyawan()
+    {
+        return $this->hasMany(karyawan::class);
+    }
 }

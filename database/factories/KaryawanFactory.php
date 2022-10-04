@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class AdminFactory extends Factory
+class KaryawanFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -15,8 +15,9 @@ class AdminFactory extends Factory
     {
         return [
             'nama' => $this->faker->name(),
-            'no_tlp' =>$this->faker->unique()->address(),
-            'user_id' => 2
+            'alamat' => $this->faker->address(),
+            'no_tlp' => $this->faker->unique()->phoneNumber(),
+            'user_id' => 3
         ];
     }
 }
