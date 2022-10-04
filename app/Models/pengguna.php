@@ -5,16 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class transaksi extends Model
+class pengguna extends Model
 {
     use HasFactory;
 
-    protected $guarded = [
-        'id'
-    ];
-
-    public function pengguna()
+    public function transaksi()
     {
-        return $this->belongsTo(pengguna::class);
+        return $this->hasMany(transaksi::class);
     }
 }
