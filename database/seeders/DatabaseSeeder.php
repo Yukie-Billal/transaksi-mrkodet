@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\detail_transaksi;
 use App\Models\pengguna;
 use App\Models\transaksi;
 use App\Models\User;
@@ -19,5 +20,6 @@ class DatabaseSeeder extends Seeder
         User::factory(5)->create();
         transaksi::factory(5)->create();
         pengguna::factory(5)->create();
+        detail_transaksi::factory(5)->create();
     }
 }
